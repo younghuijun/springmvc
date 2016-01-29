@@ -28,6 +28,11 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.twdata.maven</groupId>
+			<artifactId>mojo-executor</artifactId>
+			<version>2.2.0</version>
+		</dependency>
 
 	</dependencies>
 	<build>
@@ -38,8 +43,8 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>2.3.2</version>
 					<configuration>
-						<source>1.7</source>
-						<target>1.7</target>
+						<source>1.8</source>
+						<target>1.8</target>
 					</configuration>
 					<executions>
 						<execution>
@@ -59,17 +64,10 @@
 					</executions>
 				</plugin>
 
-				<!-- <plugin>
-					<groupId>org.apache.tomcat.maven</groupId>
-					<artifactId>tomcat6-maven-plugin</artifactId>
-					<version>2.1</version>
-					<configuration>
-						<url>http://localhost:8080/manager</url>
-						<warFile>${project.build.directory}/${project.build.finalName}.war</warFile>
-						<server>TomcatServer</server>
-					</configuration>
-				</plugin> -->
-				
+				<!-- <plugin> <groupId>org.apache.tomcat.maven</groupId> <artifactId>tomcat6-maven-plugin</artifactId> 
+					<version>2.1</version> <configuration> <url>http://localhost:8080/manager</url> 
+					<warFile>${project.build.directory}/${project.build.finalName}.war</warFile> 
+					<server>TomcatServer</server> </configuration> </plugin> -->
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat6-maven-plugin</artifactId>
